@@ -1,6 +1,4 @@
-// pages/[username].js
-
-export default function UserProfile() {
+export default function Profile() {
 
   return (
     <div>
@@ -11,4 +9,4 @@ export default function UserProfile() {
       </div>
     </div>
   );
-}
+  }

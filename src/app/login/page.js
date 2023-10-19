@@ -1,6 +1,5 @@
-// pages/[username].js
 
-export default function UserProfile() {
+export default function Login() {
 
   return (
     <div>
