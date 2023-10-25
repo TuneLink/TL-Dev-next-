@@ -27,7 +27,7 @@ function Summary() {
           Dive into unique playlists and be part of a genuine community shaping
           the future of music discovery.
         </p>
-        <button
+        {/* <button
           className="btn btn-primary px-3 py-2"
           style={{
             transition: "0.3s",
@@ -43,7 +43,7 @@ function Summary() {
           onClick={handleClick}
         >
           <i className="bi bi-play-fill mr-1"></i> Get Started!
-        </button>
+        </button> */}
       </div>
     </div>
   );

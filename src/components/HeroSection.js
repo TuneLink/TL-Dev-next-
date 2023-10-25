@@ -42,7 +42,7 @@ const HeroSection = () => {
                 giving our users a chance to discover and support up-and-coming
                 artists.
               </p>
-                <button
+                {/* <button
                   className="btn"
                   style={{
                     background:
@@ -68,7 +68,7 @@ const HeroSection = () => {
                     style={{ fontSize: "1.3rem" }}
                   ></i>
                   Explore Now
-                </button>
+                </button> */}
             </div>
             <div
               className="card-footer text-muted"
