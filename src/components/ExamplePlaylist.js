@@ -2,11 +2,12 @@
 import React, { useState } from 'react';
 import DisplayPlaylist from './DisplayPlaylist'; // Import the Playlist component
 import Head from 'next/head';
+import Script from 'next/script'
 import './ExamplePlaylist.css';
 
-<Head>
-  <script src="https://kit.fontawesome.com/f6b0cf2bdc.js" crossorigin="anonymous"></script>
-</Head>
+{/*<Head>
+  <Script src="https://kit.fontawesome.com/f6b0cf2bdc.js" crossorigin="anonymous"></Script>
+</Head>*/}
 
 function ExamplePlaylist() {
   // State to track whether to display the playlist and the selected genre
