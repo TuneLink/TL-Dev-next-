@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import React from "react";
 
 // hero section 1
@@ -36,7 +36,7 @@ const HeroSection = () => {
                   marginBottom: "30px",
                 }}
               >
-                At TuneLink, we're deeply passionate about uncovering emerging
+                At TuneLink, we&apos;re deeply passionate about uncovering emerging
                 talent in the music world. Our platform is crafted to curate
                 personalized playlists that revolve around specific genres,
                 giving our users a chance to discover and support up-and-coming

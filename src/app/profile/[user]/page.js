@@ -24,7 +24,7 @@ export default function Profile() {
           <p>Username: {profile.display_name}</p>
           <p>Email: {profile.email}</p>
           {profile.images.length > 0 && (
-            <img src={profile.images[0].url} alt={profile.display_name} />
+            <Image src={profile.images[0].url} alt={profile.display_name} />
           )}
         </div>
       ) : (

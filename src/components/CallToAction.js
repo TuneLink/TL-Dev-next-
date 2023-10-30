@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import React from "react";
 
 function Summary() {
@@ -13,7 +13,7 @@ function Summary() {
           className="mb-3"
           style={{ fontWeight: "700", color: "#333", fontSize: "1.75rem" }}
         >
-          Discover Tomorrow's Hits Today
+          Discover Tomorrow&apos;s Hits Today
         </h2>
         <p
           className="mb-4"
@@ -23,7 +23,7 @@ function Summary() {
             margin: "0 auto",
           }}
         >
-          We're all about connecting music enthusiasts with emerging artists.
+          We&apos;re all about connecting music enthusiasts with emerging artists.
           Dive into unique playlists and be part of a genuine community shaping
           the future of music discovery.
         </p>

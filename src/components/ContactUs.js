@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import React from "react";
 
 const Section3 = () => {
@@ -14,7 +14,7 @@ const Section3 = () => {
         className="text-center mb-5"
         style={{ fontSize: "18px", color: "#555" }}
       >
-        Have questions or feedback? We'd love to hear from you.
+        Have questions or feedback? We&apos;d love to hear from you.
       </p>
 
       <form>
