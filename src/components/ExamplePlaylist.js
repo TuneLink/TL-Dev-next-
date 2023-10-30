@@ -1,11 +1,12 @@
 'use client'
 import React, { useState } from 'react';
 import DisplayPlaylist from './DisplayPlaylist'; // Import the Playlist component
-import './ExamplePlaylist.css'
+import Head from 'next/head';
+import './ExamplePlaylist.css';
 
-<head>
+<Head>
   <script src="https://kit.fontawesome.com/f6b0cf2bdc.js" crossorigin="anonymous"></script>
-</head>
+</Head>
 
 function ExamplePlaylist() {
   // State to track whether to display the playlist and the selected genre

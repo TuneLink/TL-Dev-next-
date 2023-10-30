@@ -158,7 +158,7 @@ const HeroSection = () => {
                   More Coming Soon...
                 </h5>
                 <p className="card-text mb-4">
-                  We're working hard to bring you more cool features!
+                  We&apos;re working hard to bring you more cool features!
                 </p>
                 {/* <button className="btn btn-primary">Start Exploring</button> */}
               </div>
