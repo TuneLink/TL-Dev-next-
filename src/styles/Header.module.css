@@ -1,0 +1,50 @@
+/* Header.module.css */
+.header {
+  background-color: #ffae03;
+  color: #fff;
+  height: 50px; /* Fixed height */
+  width: 100%; /* Width of the viewport */
+  display: flex;
+  align-items: center; /* Vertically center the content */
+  justify-content: space-between; /* Elements on the left and right */
+  padding: 0 20px; /* Add padding as needed */
+}
+
+.navDiv {
+  height: 100%; /* Full height */
+  display: flex;
+  justify-content: space-between; /* Put max space between elements */
+  align-items: center; /* Vertically aligns children */
+  width: 100%; /* Full width */
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-items: center; /* Vertically center the list items */
+}
+
+.navList li {
+  margin-right: 20px; /* Adjust spacing between list items */
+}
+
+.navList a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.loginDiv {
+  padding: 40px;
+}
+
+.loginButton {
+  /* Style your login button as needed */
+  background-color: #fff;
+  color: #000000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
