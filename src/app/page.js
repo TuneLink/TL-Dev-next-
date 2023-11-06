@@ -6,16 +6,22 @@ import AboutUs from "@/components/AboutUs";
 import Summary from "@/components/CallToAction";
 import ContactUs from "@/components/ContactUs"
 
-
-export default function Home() {
+export default async function Home() {
   return (
-    <div>
-      <AlertDismissible/>
-      <HeroSection/> {/* HeroSection replaced the old about component*/}
-      {/* <ExamplePlaylist/> */}
-      <AboutUs/>
-      <Summary/>
-      <ContactUs/>
-    </div>
+
+  
+
+      <div>
+        <AlertDismissible/>
+        <HeroSection/> {/* HeroSection replaced the old about component*/}
+        {/* <ExamplePlaylist/> */}
+        <AboutUs/>
+        <Summary/>
+        <ContactUs/>
+      </div>
+   
+    
+      
+    
   )
 }

@@ -1,6 +1,9 @@
 import "../styles/global.css";
 import Header from "../components/Header";
 import Footer from "@/components/Footer";
+import { getServerSession } from "next-auth";
+
+import SessionProvider from "./components/SessionProvider";
 
 
 export const metadata = {
@@ -8,12 +11,24 @@ export const metadata = {
   description: "Explore music here",
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+
+  const session = await getServerSession();
+
   return (
-    <div>
-      <Header />
-      {children}
-      <Footer />
-    </div>
+    <html lang="en">
+      <head></head>
+      <body>
+        <SessionProvider session={session}>
+      
+          <main>
+            <Header />
+            {children}
+            <Footer />
+          </main>
+
+        </SessionProvider>
+      </body>
+    </html>
   );
 }
