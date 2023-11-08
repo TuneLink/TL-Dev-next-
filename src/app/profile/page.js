@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation";
 import { getServerSession } from "next-auth";
-
+import styles from "../profile/profile.module.css";
 
 export default async function ProtectedRoute() {
   const session = await getServerSession();
@@ -9,19 +9,22 @@ export default async function ProtectedRoute() {
   }
 
   return (
-    <>
-      <h1>profile page</h1>
-      {session?.user?.name ? (
+    <div className={styles.container}>
+      {session?.user ? (
         <>
-          <div>{session?.user?.name}</div>
-          <div>{session?.user?.email}</div>
-          {session?.user?.image && (
-            <img src={session?.user?.image} alt="User profile" />
-          )}
+          <img 
+            src={session.user.image} 
+            alt="User profile" 
+            className={styles.profileImage} 
+          />
+          <div className={styles.userInfo}>
+            <h2 className={styles.userName}>{session.user.name}</h2>
+            <p className={styles.userEmail}>{session.user.email}</p>
+          </div>
         </>
       ) : (
-        <div>Not logged in</div>
+        <p className={styles.notLoggedIn}>Not logged in</p>
       )}
-    </>
+    </div>
   );
 }

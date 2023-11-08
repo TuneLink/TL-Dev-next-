@@ -1,0 +1,44 @@
+/* profile.module.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+
+.profileImage {
+  width: 200px; /* Increased width for a larger picture */
+  height: 200px; /* Maintain aspect ratio for the image */
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  object-fit: cover; /* This will ensure the image covers the area without distortion */
+  border: 4px solid #ddd;
+}
+
+.userInfo {
+  text-align: center;
+}
+
+.userName {
+  font-size: 1.75rem; /* Slightly larger font size for the name */
+  color: #333;
+  margin-top: 0.5rem; /* Ensures a bit of space between the image and the name */
+  margin-bottom: 0.25rem;
+}
+
+.userEmail {
+  font-size: 1.25rem; /* Slightly larger font size for the email */
+  color: #555;
+  margin-bottom: 1rem; /* More space below the email */
+}
+
+.notLoggedIn {
+  color: #888;
+  font-style: italic;
+}

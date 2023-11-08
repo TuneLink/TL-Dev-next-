@@ -1,6 +1,7 @@
 'use client'
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 function AboutUs() {
   return (
@@ -18,15 +19,14 @@ function AboutUs() {
           "Issac",
           "Zahir",
           "Jeremy",
-          "Salsa",
+          "Sajjad",
         ].map((member, index) => (
           <div className="col-md-4 mb-4" key={index}>
             <div
               className="card bg-white shadow-lg"
               style={{
-                borderRadius: "20px",
+                borderRadius: "15px",
                 transition: "0.3s",
-                overflow: "hidden",
               }}
               onMouseOver={(e) => {
                 e.currentTarget.style.transform = "scale(1.05)";
@@ -35,47 +35,24 @@ function AboutUs() {
                 e.currentTarget.style.transform = "scale(1)";
               }}
             >
-              <div className="text-center pt-4">
-                <i
-                  className="bi bi-person-circle text-primary"
-                  style={{ fontSize: "6rem", marginBottom: "20px" }}
-                ></i>
-              </div>
-
-              <div className="card-body">
-                <h5 className="card-title font-weight-bold text-center">
+              <div className="card-body text-center">
+                {/* Icon with circular style */}
+                <div className="rounded-circle bg-primary d-inline-flex justify-content-center align-items-center"
+                  style={{
+                    width: "100px",
+                    height: "100px",
+                    margin: "0 auto 20px",
+                  }}
+                >
+                  <i className="bi bi-person-circle text-white" style={{ fontSize: "4rem" }}></i>
+                </div>
+                {/* Member name and description */}
+                <h5 className="card-title font-weight-bold">
                   {member}
                 </h5>
-                <hr style={{ margin: "20px 0" }} />
-                <p
-                  className="card-text text-center"
-                  style={{ fontSize: "16px" }}
-                >
+                <p className="card-text">
                   Principal Software Engineer
                 </p>
-              </div>
-
-              <div className="card-footer bg-light d-flex justify-content-around">
-                <a
-                  href="https://github.com/TuneLink"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {/* <i
-                    className="bi bi-github"
-                    style={{ fontSize: "1.5rem" }}
-                  ></i> */}
-                </a>
-                <a
-                  href="https://linkedin.com/in/YourLinkedInProfile"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {/* <i
-                    className="bi bi-linkedin"
-                    style={{ fontSize: "1.5rem" }}
-                  ></i> */}
-                </a>
               </div>
             </div>
           </div>

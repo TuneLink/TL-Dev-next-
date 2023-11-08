@@ -2,12 +2,12 @@
 .header {
   background-color: #ffae03;
   color: #fff;
-  height: 50px; /* Fixed height */
+  height: 60px; /* Fixed height */
   width: 100%; /* Width of the viewport */
   display: flex;
   align-items: center; /* Vertically center the content */
   justify-content: space-between; /* Elements on the left and right */
-  padding: 0 20px; /* Add padding as needed */
+  padding: 0 30px; /* Add padding as needed */
 }
 
 .navDiv {
@@ -31,20 +31,36 @@
 }
 
 .navList a {
-  color: #fff;
+  color: #333;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .loginDiv {
-  padding: 40px;
+  padding: 10px;
 }
 
 .loginButton {
   /* Style your login button as needed */
-  background-color: #fff;
-  color: #000000;
+  background-color: #333;
+  color: #fff;
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.brandLogo {
+  display: flex;
+  align-items: center;
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.5rem; /* Adjust the size as needed */
+  margin-right: 2rem; /* Space between logo and nav items */
+}
+
+.brandLogo i {
+  margin-right: 0.5rem; /* Space between icon and brand name */
+  font-size: 2rem; /* Icon size */
 }
