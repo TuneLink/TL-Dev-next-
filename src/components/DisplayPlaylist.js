@@ -1,6 +1,8 @@
 'use client'
+import React, { useState, useEffect } from 'react';
+import songsData from '../sample_songs/song_data.json'; // Update the path to where your JSON file is
+
 import ExamplePlaylist from './ExamplePlaylist';
-import React, { useState } from 'react';
 
 function DisplayPlaylist(props) {
   // Get the selected genre from props
@@ -9,17 +11,15 @@ function DisplayPlaylist(props) {
   // State to track if the example playlist should be displayed
   const [examplePlaylist, setExamplePlaylist] = useState(false);
 
-  // Initialize an empty array to store song data
-  const songList = [];
+  // State to store songs
+  const [songList, setSongList] = useState([]);
 
-  // Generate 25 example songs and add them to the songList array
-  for (let i = 1; i <= 25; i++) {
-    const song = {
-      Name: `Song ${i}`, // Generate song name
-      Artist: 'N/A',      // Set artist to "N/A" for simplicity
-    };
-    songList.push(song);
-  }
+  // Effect to filter songs by genre and set song list
+  useEffect(() => {
+    // Assuming your JSON structure is an array of song objects with a 'genre' key
+    const filteredSongs = songsData.filter(song => song.genre === genre);
+    setSongList(filteredSongs);
+  }, [genre]); // This effect runs when the genre prop changes
 
   // Function to handle the button click to show the example playlist
   const handleButtonClick = () => {
@@ -33,19 +33,17 @@ function DisplayPlaylist(props) {
 
   // Render the main component
   return (
-    <div >
+    <div>
       <br />
       <h1>This is your {genre} playlist!</h1>
-      <div >
+      <div>
         {/* Map over the songList and display each song */}
-        {songList.map((item, index) => {
-          return (
-            <div key={index}>
-              {/* Display song name and artist */}
-              {songList[index]["Name"]} by {songList[index]["Artist"]}
-            </div>
-          );
-        })}
+        {songList.map((song, index) => (
+          <div key={index}>
+            {/* Display song name and artist */}
+            {song.Name} by {song.Artist}
+          </div>
+        ))}
       </div>
       <br />
       <button onClick={handleButtonClick}>BACK</button>
