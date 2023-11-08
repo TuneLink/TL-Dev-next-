@@ -86,7 +86,7 @@ const HeroSection = () => {
                 fontFamily: "'Poppins', sans-serif",
               }}
             >
-              Join our growing community of music enthusiasts.
+              {/* Join our growing community of music enthusiasts. */}
             </div>
           </div>
         </div>

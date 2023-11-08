@@ -5,9 +5,9 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 
 function AboutUs() {
   return (
-    <div className="container py-5">
+    <div className="container py-2">
       <h2
-        className="text-center mb-5"
+        className="text-center mb-2"
         style={{ fontWeight: "700", color: "#333" }}
       >
         Meet Our Team
@@ -21,7 +21,7 @@ function AboutUs() {
           "Jeremy",
           "Sajjad",
         ].map((member, index) => (
-          <div className="col-md-4 mb-4" key={index}>
+          <div className="col-md-2 mb-2" key={index}>
             <div
               className="card bg-white shadow-lg"
               style={{
@@ -36,12 +36,13 @@ function AboutUs() {
               }}
             >
               <div className="card-body text-center">
-                {/* Icon with circular style */}
-                <div className="rounded-circle bg-primary d-inline-flex justify-content-center align-items-center"
+                {/* Icon with custom color style */}
+                <div className="rounded-circle d-inline-flex justify-content-center align-items-center"
                   style={{
                     width: "100px",
                     height: "100px",
                     margin: "0 auto 20px",
+                    backgroundColor: "#ffae03"
                   }}
                 >
                   <i className="bi bi-person-circle text-white" style={{ fontSize: "4rem" }}></i>
