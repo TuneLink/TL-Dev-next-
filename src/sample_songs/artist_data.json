@@ -1,0 +1,638 @@
+[
+  {
+    "name": "Arctic Monkeys",
+    "genre": []
+  },
+  {
+    "name": "The White Stripes",
+    "genre": []
+  },
+  {
+    "name": "Cage The Elephant",
+    "genre": []
+  },
+  {
+    "name": "Glass Animals",
+    "genre": []
+  },
+  {
+    "name": "Vance Joy",
+    "genre": []
+  },
+  {
+    "name": "The Neighbourhood",
+    "genre": []
+  },
+  {
+    "name": "Creedence Clearwater Revival",
+    "genre": []
+  },
+  {
+    "name": "Journey",
+    "genre": []
+  },
+  {
+    "name": "Richy Mitch & The Coal Miners",
+    "genre": []
+  },
+  {
+    "name": "Van Morrison",
+    "genre": []
+  },
+  {
+    "name": "Eagles",
+    "genre": []
+  },
+  {
+    "name": "Daryl Hall & John Oates",
+    "genre": []
+  },
+  {
+    "name": "Fleetwood Mac",
+    "genre": []
+  },
+  {
+    "name": "Tears For Fears",
+    "genre": []
+  },
+  {
+    "name": "Beach House",
+    "genre": []
+  },
+  {
+    "name": "AC/DC",
+    "genre": []
+  },
+  {
+    "name": "Gorillaz",
+    "genre": []
+  },
+  {
+    "name": "Guns N' Roses",
+    "genre": []
+  },
+  {
+    "name": "Metallica",
+    "genre": []
+  },
+  {
+    "name": "TOTO",
+    "genre": []
+  },
+  {
+    "name": "Hozier",
+    "genre": []
+  },
+  {
+    "name": "Nirvana",
+    "genre": []
+  },
+  {
+    "name": "Foster The People",
+    "genre": []
+  },
+  {
+    "name": "Lynyrd Skynyrd",
+    "genre": []
+  },
+  {
+    "name": "Paramore",
+    "genre": []
+  },
+  {
+    "name": "The Lumineers",
+    "genre": []
+  },
+  {
+    "name": "GROUPLOVE",
+    "genre": []
+  },
+  {
+    "name": "Imagine Dragons",
+    "genre": []
+  },
+  {
+    "name": "The Beatles",
+    "genre": []
+  },
+  {
+    "name": "Red Hot Chili Peppers",
+    "genre": []
+  },
+  {
+    "name": "Buffalo Springfield",
+    "genre": []
+  },
+  {
+    "name": "The Rolling Stones",
+    "genre": []
+  },
+  {
+    "name": "blink-182",
+    "genre": []
+  },
+  {
+    "name": "WALK THE MOON",
+    "genre": []
+  },
+  {
+    "name": "Tom Petty",
+    "genre": []
+  },
+  {
+    "name": "Weezer",
+    "genre": []
+  },
+  {
+    "name": "Fall Out Boy",
+    "genre": []
+  },
+  {
+    "name": "Neon Trees",
+    "genre": []
+  },
+  {
+    "name": "Aerosmith",
+    "genre": []
+  },
+  {
+    "name": "Zac Brown Band",
+    "genre": []
+  },
+  {
+    "name": "Boston",
+    "genre": []
+  },
+  {
+    "name": "Queen",
+    "genre": []
+  },
+  {
+    "name": "Twenty One Pilots",
+    "genre": []
+  },
+  {
+    "name": "Sublime",
+    "genre": []
+  },
+  {
+    "name": "The Police",
+    "genre": []
+  },
+  {
+    "name": "Rob Zombie",
+    "genre": []
+  },
+  {
+    "name": "System Of A Down",
+    "genre": []
+  },
+  {
+    "name": "Florence + The Machine",
+    "genre": []
+  },
+  {
+    "name": "Bon Jovi",
+    "genre": []
+  },
+  {
+    "name": "Darius Rucker",
+    "genre": []
+  },
+  {
+    "name": "Vundabar",
+    "genre": []
+  },
+  {
+    "name": "Black Sabbath",
+    "genre": []
+  },
+  {
+    "name": "Steve Miller Band",
+    "genre": []
+  },
+  {
+    "name": "Green Day",
+    "genre": []
+  },
+  {
+    "name": "The Doobie Brothers",
+    "genre": []
+  },
+  {
+    "name": "B\u00c3\u02dcRNS",
+    "genre": []
+  },
+  {
+    "name": "The Cranberries",
+    "genre": []
+  },
+  {
+    "name": "3 Doors Down",
+    "genre": []
+  },
+  {
+    "name": "Kings of Leon",
+    "genre": []
+  },
+  {
+    "name": "My Chemical Romance",
+    "genre": []
+  },
+  {
+    "name": "Cole Swindell",
+    "genre": []
+  },
+  {
+    "name": "Elton John",
+    "genre": []
+  },
+  {
+    "name": "The Goo Goo Dolls",
+    "genre": []
+  },
+  {
+    "name": "Keane",
+    "genre": []
+  },
+  {
+    "name": "Jon Pardi",
+    "genre": []
+  },
+  {
+    "name": "Luke Bryan",
+    "genre": []
+  },
+  {
+    "name": "Billy Joel",
+    "genre": []
+  },
+  {
+    "name": "Fitz and The Tantrums",
+    "genre": []
+  },
+  {
+    "name": "Jason Aldean",
+    "genre": []
+  },
+  {
+    "name": "Bruno Mars",
+    "genre": []
+  },
+  {
+    "name": "Drake",
+    "genre": []
+  },
+  {
+    "name": "Post Malone",
+    "genre": []
+  },
+  {
+    "name": "Bryan Martin",
+    "genre": []
+  },
+  {
+    "name": "Nelly Furtado",
+    "genre": []
+  },
+  {
+    "name": "Olivia Rodrigo",
+    "genre": []
+  },
+  {
+    "name": "PinkPantheress",
+    "genre": []
+  },
+  {
+    "name": "David Guetta",
+    "genre": []
+  },
+  {
+    "name": "Taylor Swift",
+    "genre": []
+  },
+  {
+    "name": "Lana Del Rey",
+    "genre": []
+  },
+  {
+    "name": "Coldplay",
+    "genre": []
+  },
+  {
+    "name": "Kali Uchis",
+    "genre": []
+  },
+  {
+    "name": "Lewis Capaldi",
+    "genre": []
+  },
+  {
+    "name": "Bizarrap",
+    "genre": []
+  },
+  {
+    "name": "Men I Trust",
+    "genre": []
+  },
+  {
+    "name": "Noah Kahan",
+    "genre": []
+  },
+  {
+    "name": "Offset",
+    "genre": []
+  },
+  {
+    "name": "SZA",
+    "genre": []
+  },
+  {
+    "name": "NewJeans",
+    "genre": []
+  },
+  {
+    "name": "Billie Eilish",
+    "genre": []
+  },
+  {
+    "name": "HARDY",
+    "genre": []
+  },
+  {
+    "name": "Jimin",
+    "genre": []
+  },
+  {
+    "name": "JVKE",
+    "genre": []
+  },
+  {
+    "name": "Bailey Zimmerman",
+    "genre": []
+  },
+  {
+    "name": "Sam Barber",
+    "genre": []
+  },
+  {
+    "name": "Yot Club",
+    "genre": []
+  },
+  {
+    "name": "Mac Miller",
+    "genre": []
+  },
+  {
+    "name": "Rihanna",
+    "genre": []
+  },
+  {
+    "name": "Joji",
+    "genre": []
+  },
+  {
+    "name": "Conan Gray",
+    "genre": []
+  },
+  {
+    "name": "The Weeknd",
+    "genre": []
+  },
+  {
+    "name": "Ed Sheeran",
+    "genre": []
+  },
+  {
+    "name": "Miley Cyrus",
+    "genre": []
+  },
+  {
+    "name": "Ruth B.",
+    "genre": []
+  },
+  {
+    "name": "Adele",
+    "genre": []
+  },
+  {
+    "name": "Justin Timberlake",
+    "genre": []
+  },
+  {
+    "name": "Megan Moroney",
+    "genre": []
+  },
+  {
+    "name": "Cigarettes After Sex",
+    "genre": []
+  },
+  {
+    "name": "Tainy",
+    "genre": []
+  },
+  {
+    "name": "Keyshia Cole",
+    "genre": []
+  },
+  {
+    "name": "Avicii",
+    "genre": []
+  },
+  {
+    "name": "Shakira",
+    "genre": []
+  },
+  {
+    "name": "Train",
+    "genre": []
+  },
+  {
+    "name": "Harry Styles",
+    "genre": []
+  },
+  {
+    "name": "Wyatt Flores",
+    "genre": []
+  },
+  {
+    "name": "Eyedress",
+    "genre": []
+  },
+  {
+    "name": "Lady Gaga",
+    "genre": []
+  },
+  {
+    "name": "Strawberry Guy",
+    "genre": []
+  },
+  {
+    "name": "Carrie Underwood",
+    "genre": []
+  },
+  {
+    "name": "Bill Evans",
+    "genre": []
+  },
+  {
+    "name": "De La Soul",
+    "genre": []
+  },
+  {
+    "name": "Nancy Wilson",
+    "genre": []
+  },
+  {
+    "name": "Otis Redding",
+    "genre": []
+  },
+  {
+    "name": "Duke Ellington",
+    "genre": []
+  },
+  {
+    "name": "GRiZ",
+    "genre": []
+  },
+  {
+    "name": "Jon Batiste",
+    "genre": []
+  },
+  {
+    "name": "Count Bass D",
+    "genre": []
+  },
+  {
+    "name": "Etta James",
+    "genre": []
+  },
+  {
+    "name": "Grover Washington, Jr.",
+    "genre": []
+  },
+  {
+    "name": "Herbie Hancock",
+    "genre": []
+  },
+  {
+    "name": "RJD2",
+    "genre": []
+  },
+  {
+    "name": "Michiel Borstlap",
+    "genre": []
+  },
+  {
+    "name": "Harry Connick, Jr.",
+    "genre": []
+  },
+  {
+    "name": "Norberg",
+    "genre": []
+  },
+  {
+    "name": "Stan Getz",
+    "genre": []
+  },
+  {
+    "name": "Darius",
+    "genre": []
+  },
+  {
+    "name": "Dean Martin",
+    "genre": []
+  },
+  {
+    "name": "Ray Charles",
+    "genre": []
+  },
+  {
+    "name": "Michael Bubl\u00c3\u00a9",
+    "genre": []
+  },
+  {
+    "name": "Earth, Wind & Fire",
+    "genre": []
+  },
+  {
+    "name": "Gillian Spencer Trio",
+    "genre": []
+  },
+  {
+    "name": "Billie Holiday",
+    "genre": []
+  },
+  {
+    "name": "Bonobo",
+    "genre": []
+  },
+  {
+    "name": "Nina Simone",
+    "genre": []
+  },
+  {
+    "name": "Patrice Rushen",
+    "genre": []
+  },
+  {
+    "name": "Thelonious Monk Septet",
+    "genre": []
+  },
+  {
+    "name": "Caravan Palace",
+    "genre": []
+  },
+  {
+    "name": "Rub\u00c3\u00a9n Blades",
+    "genre": []
+  },
+  {
+    "name": "Bobby Darin",
+    "genre": []
+  },
+  {
+    "name": "Camp Lo",
+    "genre": []
+  },
+  {
+    "name": "Chet Baker",
+    "genre": []
+  },
+  {
+    "name": "Miles Davis Quintet",
+    "genre": []
+  },
+  {
+    "name": "Pretty Lights",
+    "genre": []
+  },
+  {
+    "name": "The Southern Belle",
+    "genre": []
+  },
+  {
+    "name": "Novo Stella",
+    "genre": []
+  },
+  {
+    "name": "Nujabes",
+    "genre": []
+  },
+  {
+    "name": "James Earle Trio",
+    "genre": []
+  },
+  {
+    "name": "Big Jay McNeely",
+    "genre": []
+  },
+  {
+    "name": "James Jackson Jazz Trio",
+    "genre": []
+  },
+  {
+    "name": "McCoy Tyner",
+    "genre": []
+  }
+]
