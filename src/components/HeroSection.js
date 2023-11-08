@@ -1,5 +1,6 @@
 "use client"
 import React from "react";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
@@ -43,6 +44,7 @@ const HeroSection = () => {
                 giving our users a chance to discover and support up-and-coming
                 artists.
               </p>
+              <Link href = "/demo">
               <div className="text-center">
                 <button
                   className="btn"
@@ -74,7 +76,9 @@ const HeroSection = () => {
                   ></i>
                   Explore Now
                 </button>
+                
               </div>
+              </Link>
             </div>
             <div
               className="card-footer text-muted"

@@ -16,11 +16,11 @@ const Header = () => {
         </Link>
 
         <ul className={styles.navList}>
-          {/* <li>
-            <Link href="/">
-              <span>Home</span>
+          <li>
+            <Link href="/demo">
+              <span>Try it out!</span>
             </Link>
-          </li> */}
+          </li>
           {/* Other nav items can be added here */}
         </ul>
 
