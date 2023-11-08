@@ -14,11 +14,11 @@ export default async function Home() {
 
       <div>
         <AlertDismissible/>
+        <Summary/>
+        <FeaturesSection/>
         <HeroSection/> {/* HeroSection replaced the old about component*/}
         {/* <ExamplePlaylist/> */}
-        <FeaturesSection/>
         <AboutUs/>
-        <Summary/>
         <ContactUs/>
       </div>
    
