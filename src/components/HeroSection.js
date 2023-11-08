@@ -1,7 +1,10 @@
 "use client"
 import React from "react";
+import Link from 'next/link';
+
 
 const HeroSection = () => {
+
   return (
     <div className="container mt-5">
       <div className="row justify-content-center mb-4">
@@ -43,8 +46,8 @@ const HeroSection = () => {
                 giving our users a chance to discover and support up-and-coming
                 artists.
               </p>
-              <div className="text-center">
-                <button
+              <Link href = "/demo"> 
+                <button 
                   className="btn"
                   style={{
                     background: "#fff",
@@ -73,8 +76,8 @@ const HeroSection = () => {
                     style={{ fontSize: "1.3rem" }}
                   ></i>
                   Explore Now
-                </button>
-              </div>
+                </button> 
+                </Link>
             </div>
             <div
               className="card-footer text-muted"

@@ -1,5 +1,4 @@
 'use client'
-import './Playlist.css'
 import ExamplePlaylist from './ExamplePlaylist';
 import React, { useState } from 'react';
 
@@ -34,14 +33,14 @@ function DisplayPlaylist(props) {
 
   // Render the main component
   return (
-    <div className='Playlist'>
+    <div >
       <br />
       <h1>This is your {genre} playlist!</h1>
-      <div className='InnerContainer'>
+      <div >
         {/* Map over the songList and display each song */}
         {songList.map((item, index) => {
           return (
-            <div className="SongBox" key={index}>
+            <div key={index}>
               {/* Display song name and artist */}
               {songList[index]["Name"]} by {songList[index]["Artist"]}
             </div>
