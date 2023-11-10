@@ -1,6 +1,6 @@
 // Header.js
 import Link from "next/link";
-import styles from "../styles/Header.module.css";
+import styles from "../../styles/Header.module.css";
 import 'bootstrap-icons/font/bootstrap-icons.css'; // Importing Bootstrap icons
 
 const Header = () => {
@@ -21,8 +21,12 @@ const Header = () => {
               <span>Try it out!</span>
             </Link>
           </li>
+          <li>
+            <Link href="/profile">
+              <span>Profile</span>
+            </Link>
+          </li>
           {/* Other nav items can be added here test test*/}
-          
         </ul>
 
         <div className={styles.loginDiv}>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ExamplePlaylist from './ExamplePlaylist';
-import songsData from '../sample_songs/song_data.json';
+import songsData from '../../sample_songs/song_data.json';
 
 function DisplayPlaylist(props) {
   const genre = props.selectedGenre;
