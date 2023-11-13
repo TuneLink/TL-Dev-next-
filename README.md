@@ -1,8 +1,40 @@
+# TuneLink
+
+Hello :)
+
+Our vision is to connect people with Spotify playlists that feature both popular and undiscovered artists tailored to individual tastes.
+
+## Description
+
+First and foremost, this is our Senior Experience project. We are a team of software engineers who are honing in on our web development skills as Computer Science students @ MSU Denver. With this app, we are hoping to create a platform to connect music enthusiasts with emerging artists. Dive into unique playlists and be part of a genuine and inclusive community shaping the future of music discovery!
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
+First, install dependencies:
 
-First, run the development server:
+```bash
+npm run install
+# or
+yarn install
+# or
+pnpm install
+```
+
+Next, create an `.env`:
+
+```bash
+NEXTAUTH_URL="http://localhost:3000/"
+# generate new NEXTAUTH_SECRET with `openssl rand -base64 32`
+NEXTAUTH_SECRET = "<NEXTAUTH_SECRET>" # then `npm run build`
+SPOTIFY_CLIENT_ID="<SPOTIFY_CLIENT_ID>"
+SPOTIFY_CLIENT_SECRET="<SPOTIFY_CLIENT_SECRET>"
+SPOTIFY_REDIRECT_URI="http://localhost:3000/api/auth/callback/spotify"
+# SPOTIFY_REDIRECT_URI="<SPOTIFY_REDIRECT_URI>/api/auth/callback/spotify"
+
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -14,13 +46,24 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
 [API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+
+## Help
+
+Please create an issue if you have any questions or concerns.
+
+## Authors
+
+Contributors names and contact info
+* [CooperDavis00](https://github.com/CooperDavis00)
+* [Issac](https://github.com/Issac-Lopez)
+* [Jeremy Satram](https://github.com/Jsatram)
+* [Sajjadalfa](https://github.com/Sajjadalfa)
+* [zahirsanti05](https://github.com/zahirsanti05)
 
 ## Learn More
 
