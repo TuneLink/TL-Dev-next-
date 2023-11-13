@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import Link from "next/link";
 
@@ -13,7 +13,7 @@ const HeroSection = () => {
               borderRadius: "20px",
               overflow: "hidden",
               boxShadow: "0 4px 15px rgba(0, 0, 0, 0.2)",
-              background: `linear-gradient(to right, ${'#f2780c'} 0%, ${'#ffc251'} 100%)`, // Gradient using #ffae03
+              background: `linear-gradient(to right, ${"#f2780c"} 0%, ${"#ffc251"} 100%)`, // Gradient using #ffae03
             }}
           >
             <div className="card-body" style={{ padding: "50px" }}>
@@ -38,46 +38,47 @@ const HeroSection = () => {
                   fontFamily: "'Poppins', sans-serif",
                 }}
               >
-                At TuneLink, we're deeply passionate about uncovering emerging
-                talent in the music world. Our platform is crafted to curate
-                personalized playlists that revolve around specific genres,
-                giving our users a chance to discover and support up-and-coming
-                artists.
+                At TuneLink, we&apos;re deeply passionate about uncovering
+                emerging talent in the music world. Our platform is crafted to
+                curate personalized playlists that revolve around specific
+                genres, giving our users a chance to discover and support
+                up-and-coming artists.
               </p>
-              <Link href = "/demo">
-              <div className="text-center">
-                <button
-                  className="btn"
-                  style={{
-                    background: "#fff",
-                    color: "#ffae03",
-                    fontWeight: "500",
-                    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-                    padding: "12px 30px",
-                    borderRadius: "30px",
-                    fontSize: "18px",
-                    fontFamily: "'Poppins', sans-serif",
-                    transition: "transform 0.3s, box-shadow 0.3s",
-                    border: "none",
-                    cursor: "pointer",
-                  }}
-                  onMouseOver={(e) => {
-                    e.currentTarget.style.transform = "translateY(-3px)";
-                    e.currentTarget.style.boxShadow = "0 6px 12px rgba(0, 0, 0, 0.2)";
-                  }}
-                  onMouseOut={(e) => {
-                    e.currentTarget.style.transform = "translateY(0)";
-                    e.currentTarget.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
-                  }}
-                >
-                  <i
-                    className="bi bi-music-note-beamed mr-2"
-                    style={{ fontSize: "1.3rem" }}
-                  ></i>
-                  Explore Now
-                </button>
-                
-              </div>
+              <Link href="/demo">
+                <div className="text-center">
+                  <button
+                    className="btn"
+                    style={{
+                      background: "#fff",
+                      color: "#ffae03",
+                      fontWeight: "500",
+                      boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+                      padding: "12px 30px",
+                      borderRadius: "30px",
+                      fontSize: "18px",
+                      fontFamily: "'Poppins', sans-serif",
+                      transition: "transform 0.3s, box-shadow 0.3s",
+                      border: "none",
+                      cursor: "pointer",
+                    }}
+                    onMouseOver={(e) => {
+                      e.currentTarget.style.transform = "translateY(-3px)";
+                      e.currentTarget.style.boxShadow =
+                        "0 6px 12px rgba(0, 0, 0, 0.2)";
+                    }}
+                    onMouseOut={(e) => {
+                      e.currentTarget.style.transform = "translateY(0)";
+                      e.currentTarget.style.boxShadow =
+                        "0 4px 8px rgba(0, 0, 0, 0.1)";
+                    }}
+                  >
+                    <i
+                      className="bi bi-music-note-beamed mr-2"
+                      style={{ fontSize: "1.3rem" }}
+                    ></i>
+                    Explore Now
+                  </button>
+                </div>
               </Link>
             </div>
             <div

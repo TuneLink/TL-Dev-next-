@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import ExamplePlaylist from './ExamplePlaylist';
-import songsData from '../../sample_songs/song_data.json';
+import React, { useState, useEffect } from "react";
+import ExamplePlaylist from "./ExamplePlaylist";
+import songsData from "../../sample_songs/song_data.json";
 
 function DisplayPlaylist(props) {
   const genre = props.selectedGenre;
@@ -10,7 +10,9 @@ function DisplayPlaylist(props) {
 
   // Function to select a random set of songs
   const selectRandomSongs = () => {
-    const availableSongs = songsData.filter(song => song.genre.includes(genre.toLowerCase()));
+    const availableSongs = songsData.filter((song) =>
+      song.genre.includes(genre.toLowerCase())
+    );
     const randomSongs = shuffleArray(availableSongs).slice(0, 25); // Change 25 to the desired number of songs
     setSongList(randomSongs);
   };
@@ -40,7 +42,12 @@ function DisplayPlaylist(props) {
       <div>
         {songList.map((song, index) => (
           <div key={index} className="song-list-item">
-            <p>{song.name.length > 30 ? `${song.name.substring(0, 30)}...` : song.name} by {song.artist[0]}</p>
+            <p>
+              {song.name.length > 30
+                ? `${song.name.substring(0, 30)}...`
+                : song.name}{" "}
+              by {song.artist[0]}
+            </p>
           </div>
         ))}
       </div>

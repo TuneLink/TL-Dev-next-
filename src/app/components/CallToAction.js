@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 
 function Summary() {
@@ -8,10 +8,13 @@ function Summary() {
 
   return (
     // Apply gradient background to the entire container
-    <div className="container py-4 my-4 shadow-lg rounded" style={{
-      background: 'linear-gradient(to right, #f2780c 0%, #ffc251 100%)',
-      borderRadius: "20px",
-    }}>
+    <div
+      className="container py-4 my-4 shadow-lg rounded"
+      style={{
+        background: "linear-gradient(to right, #f2780c 0%, #ffc251 100%)",
+        borderRadius: "20px",
+      }}
+    >
       <div className="text-center px-3">
         <h2
           className="mb-3"
@@ -22,7 +25,7 @@ function Summary() {
             fontFamily: "'Poppins', sans-serif",
           }}
         >
-          Discover Tomorrow's Hits Today
+          Discover Tomorrow&apos;s Hits Today
         </h2>
         <p
           className="mb-4"
@@ -35,9 +38,9 @@ function Summary() {
             maxWidth: "600px", // Optional, for better readability
           }}
         >
-          We're all about connecting music enthusiasts with emerging artists.
-          Dive into unique playlists and be part of a genuine community shaping
-          the future of music discovery.
+          We&apos;re all about connecting music enthusiasts with emerging
+          artists. Dive into unique playlists and be part of a genuine community
+          shaping the future of music discovery.
         </p>
         <button
           className="btn px-3 py-2"

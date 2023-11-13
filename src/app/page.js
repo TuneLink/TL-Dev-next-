@@ -8,14 +8,16 @@ import FeaturesSection from "./components/Features";
 
 export default async function Home() {
   return (
-    <div>
-      <AlertDismissible />
-      <Summary />
-      <FeaturesSection />
-      <HeroSection /> {/* HeroSection replaced the old about component*/}
-      {/* <ExamplePlaylist/> */}
-      <AboutUs />
-      <ContactUs />
-    </div>
+    <main>
+      <div>
+        <AlertDismissible />
+        <Summary />
+        <FeaturesSection />
+        <HeroSection /> {/* HeroSection replaced the old about component*/}
+        {/* <ExamplePlaylist/> */}
+        <AboutUs />
+        <ContactUs />
+      </div>
+    </main>
   );
 }

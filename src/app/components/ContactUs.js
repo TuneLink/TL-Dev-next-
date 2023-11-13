@@ -1,24 +1,33 @@
-"use client"
+"use client";
 import React from "react";
 
 const Section3 = () => {
   return (
     <div className="container py-5 my-5 bg-white shadow-lg rounded">
       <div className="row">
-        <div className="col-md-8 offset-md-2"> {/* Centering the column */}
+        <div className="col-md-8 offset-md-2">
+          {" "}
+          {/* Centering the column */}
           <h2
             className="text-center mb-4"
-            style={{ fontWeight: "700", color: "#333", fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" }} // Modern font
+            style={{
+              fontWeight: "700",
+              color: "#333",
+              fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+            }} // Modern font
           >
             Contact Us
           </h2>
           <p
             className="text-center mb-4"
-            style={{ fontSize: "18px", color: "#333", fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" }}
+            style={{
+              fontSize: "18px",
+              color: "#333",
+              fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+            }}
           >
-            Have questions or feedback? We'd love to hear from you.
+            Have questions or feedback? We&apos;d love to hear from you.
           </p>
-
           <form>
             <div className="form-row">
               <div className="form-group col-md-6 mx-auto">
@@ -76,7 +85,7 @@ const Section3 = () => {
                   fontSize: "18px",
                   backgroundColor: "#ffae03",
                   color: "#333", // if you want the text color on the button to be #333
-                  borderColor: "#ffae03" // if you want to set the border color to match the background
+                  borderColor: "#ffae03", // if you want to set the border color to match the background
                 }}
               >
                 Send Message
