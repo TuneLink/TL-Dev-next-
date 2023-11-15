@@ -5,6 +5,7 @@ import { useState } from "react";
 
 export const useSpotify = (session) => {
   const [likedSongs, setLikedSongs] = useState([]);
+  const [topTracks, setTopTracks] = useState([]);
 
   const fetchLikedSongs = async () => {
     if (session) {
@@ -30,5 +31,29 @@ export const useSpotify = (session) => {
     }
   };
 
-  return { likedSongs, fetchLikedSongs };
+  const fetchTopTracks = async () => {
+    if (session) {
+      try {
+        const response = await fetch(
+          "https://api.spotify.com/v1/me/top/tracks?time_range=short_term&limit=10",
+          {
+            headers: {
+              Authorization: `Bearer ${session.accessToken}`,
+            },
+          }
+        );
+
+        if (!response.ok) {
+          throw new Error("Failed to fetch top tracks");
+        }
+
+        const data = await response.json();
+        setTopTracks(data.items);
+      } catch (error) {
+        console.error("Error fetching top tracks", error);
+      }
+    }
+  };
+
+  return { likedSongs, fetchLikedSongs, topTracks, fetchTopTracks };
 };

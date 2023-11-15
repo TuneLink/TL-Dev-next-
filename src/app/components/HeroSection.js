@@ -38,7 +38,7 @@ const HeroSection = () => {
                   fontFamily: "'Poppins', sans-serif",
                 }}
               >
-                At TuneLink, we&apos;re deeply passionate about uncovering
+                At TuneLink, we are deeply passionate about uncovering
                 emerging talent in the music world. Our platform is crafted to
                 curate personalized playlists that revolve around specific
                 genres, giving our users a chance to discover and support

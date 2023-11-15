@@ -9,7 +9,7 @@ const UserProfile = ({ user }) => {
       <div>Email: {user.email}</div>
       <div>Followers: {user.followers}</div>
       <div>Country: {user.country}</div>
-      {user.image && <Image src={user.image} alt="User profile" />}
+      {/* {user.image && <Image src={user.image} alt="User profile" />} */}
     </>
   );
 };

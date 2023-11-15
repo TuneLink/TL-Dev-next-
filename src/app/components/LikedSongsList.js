@@ -12,8 +12,7 @@ const LikedSongsList = ({ songs }) => {
           <br />
           Album: {song.album.name} <br />
           Release Date: {song.album.release_date} <br />
-          Duration: {Math.floor(song.duration_ms / 60000)}:
-          {((song.duration_ms % 60000) / 1000).toFixed(0)}
+          Popularity: {song.popularity} <br />
         </li>
       ))}
     </ol>

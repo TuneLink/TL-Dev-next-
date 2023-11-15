@@ -7,26 +7,13 @@
 "use client";
 import React from "react";
 import { useSession, signIn, signOut } from "next-auth/react";
-import { useEffect } from "react";
 import { useSpotify } from "../hooks/useSpotify";
 import UserProfile from "../components/UserProfile";
 import LikedSongsList from "../components/LikedSongsList";
 
 export default function ProtectedRoute() {
-  const { data: session, status } = useSession({
-    required: true,
-    onUnauthenticated() {
-      signIn();
-    },
-  });
-
+  const { data: session, status } = useSession();
   const { likedSongs, fetchLikedSongs } = useSpotify(session);
-
-  useEffect(() => {
-    if (status === "unauthenticated") {
-      signIn();
-    }
-  }, [status]);
 
   const handleSignOut = () => {
     if (confirm("Are you sure you want to sign out?")) {
@@ -38,18 +25,24 @@ export default function ProtectedRoute() {
     return <div>Loading...</div>;
   }
 
+  if (status === "unauthenticated") {
+    return (
+      <>
+        <h2>Profile Page</h2>
+        <p>You need to be signed in to view this page.</p>
+        <button onClick={() => signIn()}>Sign In</button>
+      </>
+    );
+  }
+
   return (
     <>
       <h2>Profile Page</h2>
-      {session?.user && (
-        <>
-          <UserProfile user={session.user} />
-          <h3>Click button below to get your 5 most recently liked songs!</h3>
-          <button onClick={fetchLikedSongs}>Get Songs Button</button>
-          <LikedSongsList songs={likedSongs} />
-          <button onClick={handleSignOut}>Sign Out</button>
-        </>
-      )}
+      <UserProfile user={session.user} />
+      <h3>Click button below to get your 5 most recently liked songs!</h3>
+      <button onClick={fetchLikedSongs}>Get Songs Button</button>
+      <LikedSongsList songs={likedSongs} />
+      <button onClick={handleSignOut}>Sign Out</button>
     </>
   );
 }

@@ -13,7 +13,7 @@ const Section3 = () => {
             style={{
               fontWeight: "700",
               color: "#333",
-              fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+              fontFamily: "Segoe UI, Tahoma, Geneva, Verdana, sans-serif",
             }} // Modern font
           >
             Contact Us
