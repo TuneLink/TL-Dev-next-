@@ -5,9 +5,9 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 
 function AboutUs() {
   return (
-    <div className="container py-2">
+    <div className="container py-4">
       <h2
-        className="text-center mb-2"
+        className="text-center mb-4"
         style={{ fontWeight: "700", color: "#333" }}
       >
         Meet Our Team
@@ -27,12 +27,6 @@ function AboutUs() {
               style={{
                 borderRadius: "15px",
                 transition: "0.3s",
-              }}
-              onMouseOver={(e) => {
-                e.currentTarget.style.transform = "scale(1.05)";
-              }}
-              onMouseOut={(e) => {
-                e.currentTarget.style.transform = "scale(1)";
               }}
             >
               <div className="card-body text-center">

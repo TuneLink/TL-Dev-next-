@@ -1,6 +1,8 @@
 "use client"
 import React, { useState } from 'react';
 import DisplayPlaylist from './DisplayPlaylist'; // Import the Playlist component
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 function ExamplePlaylist() {
   // State to track whether to display the playlist and the selected genre
@@ -18,25 +20,53 @@ function ExamplePlaylist() {
     return <DisplayPlaylist selectedGenre={selectedGenre} />;
   }
 
+  // Genre data to be mapped
+  const genres = [
+    {
+      title: 'Rock',
+      icon: 'bi bi-boombox', // Corrected class name
+      genre: 'Rock',
+    },
+    {
+      title: 'Jazz',
+      icon: 'bi-music-note-beamed', // Example icon for Jazz
+      genre: 'Jazz',
+    },
+    {
+      title: 'Pop',
+      icon: 'bi-music-player', // Example icon for Pop
+      genre: 'Pop',
+    },
+  ];
+
   // Render the main component
   return (
-    <div>
-      <br />
-      <h1>Example Playlist</h1>
-      <p>Click one of the buttons below:</p>
-      <div>
-        <button onClick={() => handleButtonClick('Rock')} >
-          <i class="fa-solid fa-guitar-electric"></i>
-          <p><br />Rock</p>
-        </button>
-        <button onClick={() => handleButtonClick('Jazz')} > 
-        <i class="fa-solid fa-saxophone"></i>
-        <p><br />Jazz</p>
-        </button>
-        <button onClick={() => handleButtonClick('Pop')}>
-        <i class="fa-solid fa-microphone-stand"></i>
-          <p><br />Pop</p>
-        </button>
+    <div className="container py-5">
+      <h2 className="text-center mb-5" style={{ fontWeight: '700', color: '#333' }}>Example Playlist</h2>
+      <div className="row justify-content-center">
+        {genres.map((genre, index) => (
+          <div className="col-lg-4 mb-4" key={index}>
+            <div className="card bg-white shadow-lg" style={{ borderRadius: '15px', transition: '0.3s' }}>
+              <div className="card-body text-center p-5">
+                <div className="rounded-circle d-inline-flex justify-content-center align-items-center"
+                     style={{ width: '100px', height: '100px', margin: '0 auto 20px', backgroundColor: '#ffae03' }}>
+                  <i className={`bi ${genre.icon} text-white`} style={{ fontSize: '4rem' }}></i>
+                </div>
+                <h5 className="card-title font-weight-bold">{genre.title}</h5>
+                <button 
+                style={{
+                  transition: "0.3s",
+                  boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.1)",
+                  fontSize: "18px",
+                  backgroundColor: "#ffae03",
+                  color: "#333", // if you want the text color on the button to be #333
+                  borderColor: "#ffae03", // if you want to set the border color to match the background
+                }}
+                onClick={() => handleButtonClick(genre.genre)} className="btn btn-primary">Select</button>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

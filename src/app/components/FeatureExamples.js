@@ -40,12 +40,7 @@ function FeaturesSection() {
                 borderRadius: '15px',
                 transition: '0.3s',
               }}
-              onMouseOver={(e) => {
-                e.currentTarget.style.transform = 'scale(1.05)';
-              }}
-              onMouseOut={(e) => {
-                e.currentTarget.style.transform = 'scale(1)';
-              }}
+              
             >
               <div className="card-body text-center p-5">
                 <div className="rounded-circle d-inline-flex justify-content-center align-items-center"
