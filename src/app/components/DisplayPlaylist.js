@@ -9,6 +9,7 @@ function DisplayPlaylist(props) {
   const genre = props.selectedGenre;
 
   const [songList, setSongList] = useState([]);
+  const [examplePlaylist, setExamplePlaylist] = useState(false);
 
   // Function to select a random set of songs
   const selectRandomSongs = () => {
@@ -30,6 +31,10 @@ function DisplayPlaylist(props) {
   const handleNewPlaylistClick = () => {
     selectRandomSongs();
   };
+
+  if (examplePlaylist) {
+    return <ExamplePlaylist />;
+  }
 
   return (
     <div className="container py-5">
