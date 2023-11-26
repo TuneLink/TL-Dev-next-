@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 
 function Summary() {
   const handleClick = () => {
@@ -25,7 +26,7 @@ function Summary() {
             fontFamily: "'Poppins', sans-serif",
           }}
         >
-          Discover Tomorrow&apos;s Hits Today
+          Find Your Soundtrack!
         </h2>
         <p
           className="mb-4"
@@ -38,36 +39,40 @@ function Summary() {
             maxWidth: "600px", // Optional, for better readability
           }}
         >
-          We&apos;re all about connecting music enthusiasts with emerging
-          artists. Dive into unique playlists and be part of a genuine community
-          shaping the future of music discovery.
+          Welcome to our music discovery platform, where creating the perfect
+          playlist is just a click away. Simply select a genre and our demo will
+          generate a personalized playlist for you. With a variety of genres to
+          choose from, each playlist is a unique journey through music. Discover
+          new favorites, uncover hidden gems, and revisit classic hits. Start
+          exploring now and let the music inspire you!
         </p>
-        <button
-          className="btn px-3 py-2"
-          style={{
-            transition: "0.3s",
-            boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.15)",
-            fontSize: "18px",
-            fontWeight: "500",
-            background: "#fff",
-            color: "#f2780c",
-            borderRadius: "30px",
-            fontFamily: "'Poppins', sans-serif",
-            border: "none",
-            cursor: "pointer",
-          }}
-          onMouseOver={(e) => {
-            e.target.style.transform = "scale(1.05)";
-            e.target.style.boxShadow = "0px 6px 15px rgba(0, 0, 0, 0.2)";
-          }}
-          onMouseOut={(e) => {
-            e.target.style.transform = "scale(1)";
-            e.target.style.boxShadow = "0px 4px 15px rgba(0, 0, 0, 0.1)";
-          }}
-          onClick={handleClick}
-        >
-          <i className="bi bi-play-fill mr-1"></i> Get Started!
-        </button>
+        <Link href="/demo">
+          <button
+            className="btn px-3 py-2"
+            style={{
+              transition: "0.3s",
+              boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.15)",
+              fontSize: "18px",
+              fontWeight: "500",
+              background: "#fff",
+              color: "#f2780c",
+              borderRadius: "30px",
+              fontFamily: "'Poppins', sans-serif",
+              border: "none",
+              cursor: "pointer",
+            }}
+            onMouseOver={(e) => {
+              e.target.style.transform = "scale(1.05)";
+              e.target.style.boxShadow = "0px 6px 15px rgba(0, 0, 0, 0.2)";
+            }}
+            onMouseOut={(e) => {
+              e.target.style.transform = "scale(1)";
+              e.target.style.boxShadow = "0px 4px 15px rgba(0, 0, 0, 0.1)";
+            }}
+          >
+            <i className="bi bi-play-fill mr-1"></i> Get Started!
+          </button>
+        </Link>
       </div>
     </div>
   );

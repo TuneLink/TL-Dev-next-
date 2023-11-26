@@ -1,7 +1,7 @@
 // Header.js
 import Link from "next/link";
 import styles from "../../styles/Header.module.css";
-import 'bootstrap-icons/font/bootstrap-icons.css'; // Importing Bootstrap icons
+import "bootstrap-icons/font/bootstrap-icons.css"; // Importing Bootstrap icons
 import AuthButton from "./AuthButton";
 
 const Header = () => {
@@ -19,14 +19,14 @@ const Header = () => {
         <ul className={styles.navList}>
           <li>
             <Link href="/demo">
-              <span>Try it out!</span>
+              <span>Discover</span>
             </Link>
           </li>
-          <li>
+          {/*<li>
             <Link href="/profile">
               <span>Profile</span>
             </Link>
-          </li>
+          </li>*/}
           <li>
             <Link href="/features">
               <span>Features</span>
