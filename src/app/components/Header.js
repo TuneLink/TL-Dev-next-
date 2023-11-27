@@ -22,11 +22,11 @@ const Header = () => {
               <span>Discover</span>
             </Link>
           </li>
-          {/*<li>
+          <li>
             <Link href="/profile">
               <span>Profile</span>
             </Link>
-          </li>*/}
+          </li>
           <li>
             <Link href="/features">
               <span>Features</span>

@@ -5,15 +5,25 @@
 */
 
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useSession, signIn, signOut } from "next-auth/react";
 import { useSpotify } from "../hooks/useSpotify";
 import UserProfile from "../components/UserProfile";
 import LikedSongsList from "../components/LikedSongsList";
+import TopArtistsList from "../components/TopArtistsList";
 
 export default function ProtectedRoute() {
   const { data: session, status } = useSession();
-  const { likedSongs, fetchLikedSongs } = useSpotify(session);
+
+  const { likedSongs, fetchLikedSongs, topArtists, fetchTopArtists } =
+    useSpotify(session);
+
+  useEffect(() => {
+    if (session) {
+      fetchLikedSongs();
+      fetchTopArtists();
+    }
+  }, [session]);
 
   const handleSignOut = () => {
     if (confirm("Are you sure you want to sign out?")) {
@@ -39,9 +49,8 @@ export default function ProtectedRoute() {
     <>
       <h2>Profile Page</h2>
       <UserProfile user={session.user} />
-      <h3>Click button below to get your 5 most recently liked songs!</h3>
-      <button onClick={fetchLikedSongs}>Get Songs Button</button>
       <LikedSongsList songs={likedSongs} />
+      <TopArtistsList artists={topArtists} />
       <button onClick={handleSignOut}>Sign Out</button>
     </>
   );
