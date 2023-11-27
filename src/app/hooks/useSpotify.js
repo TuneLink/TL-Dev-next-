@@ -11,7 +11,7 @@ export const useSpotify = (session) => {
     if (session) {
       try {
         const response = await fetch(
-          "https://api.spotify.com/v1/me/tracks?limit=10",
+          "https://api.spotify.com/v1/me/tracks?limit=5",
           {
             headers: {
               Authorization: `Bearer ${session.accessToken}`,

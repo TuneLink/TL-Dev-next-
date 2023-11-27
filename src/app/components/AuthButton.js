@@ -14,8 +14,7 @@ const AuthButton = () => {
     return (
       <>
         {session.user.name} <br />
-        <button 
-        onClick={handleSignOut}>Sign Out</button>
+        <button onClick={handleSignOut}>Sign Out</button>
       </>
     );
   }
