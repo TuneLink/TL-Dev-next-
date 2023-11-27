@@ -4,12 +4,12 @@ import { useSession, signIn, signOut } from "next-auth/react";
 import { useSpotify } from "../hooks/useSpotify";
 import { useState } from "react";
 import TopTracks from "../components/TopTracks";
+import RecommendedTracks from "../components/RecommendedTracks";
 
 // This component is a placeholder for the features page.
 // It will display the user's top tracks and whatever else we want to add.
 export default function ProtectedRoute() {
   const { data: session, status } = useSession();
-  const { likedSongs, fetchLikedSongs } = useSpotify(session);
 
   // States to manage the visibility of lists
   const [showList1, setShowList1] = useState(false);
@@ -43,21 +43,17 @@ export default function ProtectedRoute() {
         <>
           {/* Top Tracks Section */}
           <button onClick={() => setShowList1(!showList1)}>
-            Toggle List 1
+            Top tracks
           </button>
           {showList1 && <TopTracks session={session} />}
 
+
           {/* Second List Section */}
           <button onClick={() => setShowList2(!showList2)}>
-            Toggle List 2
+            recommended Songs
           </button>
-          {showList2 && <div>List 2 Content Goes Here</div>}
+          {showList2 && <RecommendedTracks session={session} />}
 
-          {/* Third List Section */}
-          <button onClick={() => setShowList3(!showList3)}>
-            Toggle List 3
-          </button>
-          {showList3 && <div>List 3 Content Goes Here</div>}
 
           <button onClick={handleSignOut}>Sign Out</button>
         </>

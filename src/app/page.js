@@ -11,7 +11,7 @@ export default async function Home() {
       <div>
         <Summary />
         <FeaturesSection />
-        <HeroSection />
+        {/*<HeroSection />*/}
         <AboutUs />
         <ContactUs />
       </div>
