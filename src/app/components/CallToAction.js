@@ -21,7 +21,7 @@ function Summary() {
           className="mb-3"
           style={{
             fontWeight: "700",
-            color: "#fff",
+            color: "#333",
             fontSize: "1.75rem",
             fontFamily: "'Poppins', sans-serif",
           }}
@@ -33,7 +33,7 @@ function Summary() {
           style={{
             fontSize: "18px",
             lineHeight: "1.7",
-            color: "#fff",
+            color: "#333",
             fontFamily: "'Poppins', sans-serif",
             margin: "0 auto",
             maxWidth: "600px", // Optional, for better readability

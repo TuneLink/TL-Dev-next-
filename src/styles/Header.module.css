@@ -1,7 +1,7 @@
 /* Header.module.css */
 .header {
   background-color: #ffae03;
-  color: #fff;
+  color: #333;
   height: 60px; /* Fixed height */
   width: 100%; /* Width of the viewport */
   display: flex;
