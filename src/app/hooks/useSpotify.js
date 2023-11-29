@@ -4,6 +4,8 @@ export const useSpotify = (session) => {
   const [likedSongs, setLikedSongs] = useState([]);
   const [topTracks, setTopTracks] = useState([]);
   const [recommendedSongs, setRecommendedSongs] = useState([]);
+  const [topArtists, setTopArtists] = useState([]);
+
 
   const fetchLikedSongs = async () => {
     if (session) {
@@ -62,7 +64,7 @@ export const useSpotify = (session) => {
   const fetchRecommendedSongs = async () => {
     if (session) {
       try {
-        const topTrackIds = topTracks.map((track) => track.id).join(',');
+        const topTrackIds = topTracks.map((track) => track.id).join(",");
 
         const response = await fetch(
           `https://api.spotify.com/v1/recommendations?seed_tracks=${topTrackIds}`,
@@ -85,5 +87,78 @@ export const useSpotify = (session) => {
     }
   };
 
-  return { likedSongs, fetchLikedSongs, topTracks, fetchTopTracks, recommendedSongs, fetchRecommendedSongs };
+  const getTopTracks = async (session) => {
+    if (!session) {
+      setError("No session available");
+      return;
+    }
+
+    setIsLoading(true);
+    setError(null);
+
+    try {
+      const response = await fetch(
+        "https://api.spotify.com/v1/me/top/tracks?time_range=short_term&limit=10",
+        {
+          headers: {
+            Authorization: `Bearer ${session.accessToken}`,
+          },
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Failed to fetch top tracks");
+      }
+
+      const data = await response.json();
+      setTopTracks(data.items);
+    } catch (error) {
+      console.error("Error fetching top tracks", error);
+      setError(error.message);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  // This function will fetch the user's top artists from Spotify.
+  // as well as update the top genres based on these artists.
+  const fetchTopArtists = async () => {
+    if (session) {
+      try {
+        const response = await fetch(
+          "https://api.spotify.com/v1/me/top/artists?time_range=medium_term&limit=10",
+          {
+            headers: {
+              Authorization: `Bearer ${session.accessToken}`,
+            },
+          }
+        );
+
+        if (!response.ok) {
+          throw new Error("Failed to fetch top artists");
+        }
+
+        const data = await response.json();
+        setTopArtists(data.items);
+
+        // Update top genres based on these artists
+        const genres = new Set(data.items.flatMap((artist) => artist.genres));
+        setTopGenres(genres);
+      } catch (error) {
+        console.error("Error fetching top artists", error);
+      }
+    }
+  };
+
+  return {
+    likedSongs,
+    fetchLikedSongs,
+    topTracks,
+    fetchTopTracks,
+    recommendedSongs,
+    fetchRecommendedSongs,
+    getTopTracks,
+    topArtists,
+    fetchTopArtists
+  };
 };

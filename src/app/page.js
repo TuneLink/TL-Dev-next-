@@ -4,6 +4,8 @@ import AboutUs from "./components/AboutUs";
 import Summary from "./components/CallToAction";
 import ContactUs from "./components/ContactUs";
 import FeaturesSection from "./components/FeatureExamples";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 
 export default async function Home() {
   return (
