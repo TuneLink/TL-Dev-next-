@@ -24,7 +24,7 @@ function ExamplePlaylist() {
   const genres = [
     {
       title: "Rock",
-      icon: "bi bi-boombox", // Corrected class name
+      icon: "bi-music-note-beamed", // Corrected class name
       genre: "Rock",
     },
     {
@@ -34,9 +34,34 @@ function ExamplePlaylist() {
     },
     {
       title: "Pop",
-      icon: "bi-music-player", // Example icon for Pop
+      icon: "bi-music-note-beamed", // Example icon for Pop
       genre: "Pop",
     },
+    {
+      title: "EDM",
+      icon: "bi-music-note-beamed", // Corrected class name
+      genre: "EDM",
+    },
+    {
+      title: "Rap",
+      icon: "bi-music-note-beamed", // Corrected class name
+      genre: "Rap",
+    },
+    {
+      title: "Lo-Fi",
+      icon: "bi-music-note-beamed", // Corrected class name
+      genre: "Lo-Fi",
+    },
+    {
+      title: "Country",
+      icon: "bi-music-note-beamed", // Corrected class name
+      genre: "Country",
+    },
+    {
+      title: "House",
+      icon: "bi-music-note-beamed", // Corrected class name
+      genre: "House",
+    }
   ];
 
   // Render the main component
