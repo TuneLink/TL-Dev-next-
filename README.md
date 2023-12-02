@@ -11,7 +11,10 @@ First and foremost, this is our Senior Experience project. We are a team of soft
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
-First, install dependencies:
+If you are unfamiliar with Spotify's Web API, check out the following link for an official getting started guide from Spotify for Developers:
+https://developer.spotify.com/documentation/web-api/tutorials/getting-started
+
+Install dependencies:
 
 ```bash
 npm run install
@@ -22,7 +25,6 @@ pnpm install
 ```
 
 Next, create an `.env`:
-
 ```bash
 NEXTAUTH_URL="http://localhost:3000/"
 # generate new NEXTAUTH_SECRET with `openssl rand -base64 32`
