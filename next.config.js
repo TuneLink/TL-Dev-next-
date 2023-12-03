@@ -5,4 +5,9 @@ const nextConfig = {
     },
 }
 
-module.exports = nextConfig
+module.exports = {
+  images: {
+    domains: ["i.scdn.co"], // Add other domains here as needed
+  },
+  // ... other Next.js config
+};

@@ -1,9 +1,9 @@
-import HeroSection from "./components/HeroSection";
+import HeroSection from "./components/landing-page/HeroSection";
 // import ExamplePlaylist from "../components/ExamplePlaylist";
-import AboutUs from "./components/AboutUs";
-import Summary from "./components/CallToAction";
-import ContactUs from "./components/ContactUs";
-import FeaturesSection from "./components/FeatureExamples";
+import AboutUs from "./components/landing-page/AboutUs";
+import Summary from "./components/landing-page/CallToAction";
+import ContactUs from "./components/landing-page/ContactUs";
+import FeaturesSection from "./components/example/FeatureExamples";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 

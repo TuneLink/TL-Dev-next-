@@ -1,6 +1,5 @@
-// Header.js
 import Link from "next/link";
-import styles from "../../styles/Header.module.css";
+import styles from "../../../styles/Header.module.css";
 import "bootstrap-icons/font/bootstrap-icons.css"; // Importing Bootstrap icons
 import AuthButton from "./AuthButton";
 

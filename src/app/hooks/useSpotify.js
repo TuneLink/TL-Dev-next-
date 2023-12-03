@@ -1,11 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export const useSpotify = (session) => {
   const [likedSongs, setLikedSongs] = useState([]);
   const [topTracks, setTopTracks] = useState([]);
-  const [recommendedSongs, setRecommendedSongs] = useState([]);
   const [topArtists, setTopArtists] = useState([]);
-
 
   const fetchLikedSongs = async () => {
     if (session) {
@@ -35,7 +33,7 @@ export const useSpotify = (session) => {
     if (session) {
       try {
         const response = await fetch(
-          "https://api.spotify.com/v1/me/top/tracks?time_range=short_term&limit=5",
+          "https://api.spotify.com/v1/me/top/tracks?time_range=short_term&limit=15",
           {
             headers: {
               Authorization: `Bearer ${session.accessToken}`,
@@ -48,75 +46,13 @@ export const useSpotify = (session) => {
         }
 
         const data = await response.json();
+        console.log(data);
         setTopTracks(data.items);
+        const topTrackIds = data.items.map((track) => track.id);
+        console.log("Top Track IDs:", topTrackIds);
       } catch (error) {
         console.error("Error fetching top tracks", error);
       }
-    }
-  };
-
-  useEffect(() => {
-    if (topTracks.length > 0) {
-      fetchRecommendedSongs();
-    }
-  }, [topTracks]);
-
-  const fetchRecommendedSongs = async () => {
-    if (session) {
-      try {
-        const topTrackIds = topTracks.map((track) => track.id).join(",");
-
-        const response = await fetch(
-          `https://api.spotify.com/v1/recommendations?seed_tracks=${topTrackIds}`,
-          {
-            headers: {
-              Authorization: `Bearer ${session.accessToken}`,
-            },
-          }
-        );
-
-        if (!response.ok) {
-          throw new Error("Failed to fetch recommended songs");
-        }
-
-        const data = await response.json();
-        setRecommendedSongs(data.tracks);
-      } catch (error) {
-        console.error("Error fetching recommended songs", error);
-      }
-    }
-  };
-
-  const getTopTracks = async (session) => {
-    if (!session) {
-      setError("No session available");
-      return;
-    }
-
-    setIsLoading(true);
-    setError(null);
-
-    try {
-      const response = await fetch(
-        "https://api.spotify.com/v1/me/top/tracks?time_range=short_term&limit=10",
-        {
-          headers: {
-            Authorization: `Bearer ${session.accessToken}`,
-          },
-        }
-      );
-
-      if (!response.ok) {
-        throw new Error("Failed to fetch top tracks");
-      }
-
-      const data = await response.json();
-      setTopTracks(data.items);
-    } catch (error) {
-      console.error("Error fetching top tracks", error);
-      setError(error.message);
-    } finally {
-      setIsLoading(false);
     }
   };
 
@@ -140,25 +76,161 @@ export const useSpotify = (session) => {
 
         const data = await response.json();
         setTopArtists(data.items);
-
-        // Update top genres based on these artists
-        const genres = new Set(data.items.flatMap((artist) => artist.genres));
-        setTopGenres(genres);
+        console.log(data);
       } catch (error) {
         console.error("Error fetching top artists", error);
       }
     }
   };
 
+  const createPlaylist = async (playlistName, trackUris) => {
+    if (session) {
+      try {
+        // Create a new playlist
+        const createPlaylistResponse = await fetch(
+          `https://api.spotify.com/v1/users/${session.user.id}/playlists`,
+          {
+            method: "POST",
+            headers: {
+              Authorization: `Bearer ${session.accessToken}`,
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              name: playlistName,
+              description: "My top tracks playlist",
+              public: false, // Set to true if you want the playlist to be public
+            }),
+          }
+        );
+
+        const playlist = await createPlaylistResponse.json();
+
+        if (!createPlaylistResponse.ok) {
+          throw new Error("Failed to create playlist");
+        }
+
+        // Add tracks to the playlist
+        const addTracksResponse = await fetch(
+          `https://api.spotify.com/v1/playlists/${playlist.id}/tracks`,
+          {
+            method: "POST",
+            headers: {
+              Authorization: `Bearer ${session.accessToken}`,
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              uris: trackUris,
+            }),
+          }
+        );
+
+        if (!addTracksResponse.ok) {
+          throw new Error("Failed to add tracks to playlist");
+        }
+
+        return playlist;
+      } catch (error) {
+        console.error("Error creating playlist", error);
+      }
+    }
+  };
+
+  const fetchUserPlaylists = async () => {
+    if (session) {
+      try {
+        const response = await fetch(
+          "https://api.spotify.com/v1/me/playlists",
+          {
+            headers: {
+              Authorization: `Bearer ${session.accessToken}`,
+            },
+          }
+        );
+
+        if (!response.ok) {
+          throw new Error("Failed to fetch playlists");
+        }
+
+        const data = await response.json();
+        return data.items; // Assuming the items array contains the playlists
+      } catch (error) {
+        console.error("Error fetching user playlists", error);
+        return []; // Return an empty array in case of error
+      }
+    }
+    return []; // Return an empty array if there is no session
+  };
+
+  const deletePlaylist = async (playlistId) => {
+    if (session) {
+      try {
+        const response = await fetch(
+          `https://api.spotify.com/v1/playlists/${playlistId}/followers`,
+          {
+            method: "DELETE",
+            headers: {
+              Authorization: `Bearer ${session.accessToken}`,
+            },
+          }
+        );
+
+        if (!response.ok) {
+          throw new Error("Failed to delete playlist");
+        }
+
+        return true; // Indicates successful deletion
+      } catch (error) {
+        console.error("Error deleting playlist", error);
+        return false; // Indicates failure
+      }
+    }
+    return false; // No session, can't delete
+  };
+
+  const updatePlaylistName = async (playlistId, newName) => {
+    if (session) {
+      try {
+        const response = await fetch(
+          `https://api.spotify.com/v1/playlists/${playlistId}`,
+          {
+            method: "PUT",
+            headers: {
+              Authorization: `Bearer ${session.accessToken}`,
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              name: newName,
+            }),
+          }
+        );
+
+        if (!response.ok) {
+          throw new Error("Failed to update playlist name");
+        }
+
+        return true; // Indicates successful update
+      } catch (error) {
+        console.error("Error updating playlist name", error);
+        return false; // Indicates failure
+      }
+    }
+    return false; // No session, can't update
+  };
+
+
+
   return {
     likedSongs,
     fetchLikedSongs,
     topTracks,
     fetchTopTracks,
-    recommendedSongs,
-    fetchRecommendedSongs,
-    getTopTracks,
     topArtists,
-    fetchTopArtists
+    fetchTopArtists,
+    createPlaylist,
+    fetchUserPlaylists,
+    deletePlaylist,
+    updatePlaylistName
+    // recommendedTracks,
+    // fetchTopTracksAndRecommendations,
   };
 };

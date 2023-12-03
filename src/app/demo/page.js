@@ -1,4 +1,4 @@
-import ExamplePlaylist from "../components/ExamplePlaylist";
+import ExamplePlaylist from "../components/example/ExamplePlaylist";
 
 export default async function demo() {
   return (

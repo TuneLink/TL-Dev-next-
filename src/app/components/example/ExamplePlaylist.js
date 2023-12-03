@@ -61,7 +61,7 @@ function ExamplePlaylist() {
       title: "House",
       icon: "bi-music-note-beamed", // Corrected class name
       genre: "House",
-    }
+    },
   ];
 
   // Render the main component

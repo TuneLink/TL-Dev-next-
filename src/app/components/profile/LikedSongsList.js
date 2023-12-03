@@ -34,12 +34,18 @@ const LikedSongsList = ({ songs }) => {
               alt={song.album.name}
               style={{ width: "60px", height: "60px", marginRight: "10px" }}
             />
-            <strong>{song.name}</strong> by{" "}
+            <a
+              href={song.external_urls.spotify}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              <strong>{song.name}</strong>
+            </a>{" "}
             {song.artists.map((artist) => artist.name).join(", ")}
             <div className="text-muted">
               <small>
                 Album: {song.album.name} <br />
-                Release Date: {song.album.release_date} <br />
                 Popularity: {song.popularity}
               </small>
             </div>

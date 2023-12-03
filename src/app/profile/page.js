@@ -8,9 +8,10 @@
 import React, { useEffect, useState } from "react";
 import { useSession, signIn, signOut } from "next-auth/react";
 import { useSpotify } from "../hooks/useSpotify";
-import UserProfile from "../components/UserProfile";
-import LikedSongsList from "../components/LikedSongsList";
-import TopArtistsList from "../components/TopArtistsList";
+import UserProfile from "../components/profile/UserProfile";
+import LikedSongsList from "../components/profile/LikedSongsList";
+import TopArtistsList from "../components/profile/TopArtistsList";
+import UserPlaylists from "../components/profile/UserPlaylists";
 
 export default function ProtectedRoute() {
   const { data: session, status } = useSession();
@@ -38,7 +39,6 @@ export default function ProtectedRoute() {
   if (status === "unauthenticated") {
     return (
       <>
-        <h2>Profile Page</h2>
         <p>You need to be signed in to view this page.</p>
         <button onClick={() => signIn()}>Sign In</button>
       </>
@@ -47,8 +47,8 @@ export default function ProtectedRoute() {
 
   return (
     <>
-      <h2>Profile Page</h2>
       <UserProfile user={session.user} />
+      <UserPlaylists session={session} />
       <LikedSongsList songs={likedSongs} />
       <TopArtistsList artists={topArtists} />
       <button onClick={handleSignOut}>Sign Out</button>
