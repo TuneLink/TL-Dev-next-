@@ -10,7 +10,6 @@ import { useSession, signIn, signOut } from "next-auth/react";
 import { useSpotify } from "../hooks/useSpotify";
 import UserProfile from "../components/profile/UserProfile";
 import LikedSongsList from "../components/profile/LikedSongsList";
-import TopArtistsList from "../components/profile/TopArtistsList";
 import UserPlaylists from "../components/profile/UserPlaylists";
 
 export default function ProtectedRoute() {
@@ -50,7 +49,6 @@ export default function ProtectedRoute() {
       <UserProfile user={session.user} />
       <UserPlaylists session={session} />
       <LikedSongsList songs={likedSongs} />
-      <TopArtistsList artists={topArtists} />
       <button onClick={handleSignOut}>Sign Out</button>
     </>
   );

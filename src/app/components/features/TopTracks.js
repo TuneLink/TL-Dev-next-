@@ -44,7 +44,7 @@ const TopTracks = ({ session }) => {
   return (
     <div className="card">
       <div className="card-header">
-        <h3>Your Top 15 Tracks from the Last 30 Days</h3>
+        <h3>Your Recent Top Tracks</h3>
         <button onClick={handleCreatePlaylist} className="btn btn-primary">
           Create Playlist
         </button>

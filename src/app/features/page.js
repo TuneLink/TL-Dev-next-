@@ -2,8 +2,7 @@
 import React from "react";
 import { useSession, signIn, signOut } from "next-auth/react";
 import TopTracks from "../components/features/TopTracks";
-// import RecommendedSongs from "../components/features/RecommendedSongs";
-
+import TopArtistsPlaylistCreator from "../components/features/TopArtistsPlaylistCreator";
 // This component is a placeholder for the features page.
 // It will display the user's top tracks and whatever else we want to add.
 export default function ProtectedRoute() {
@@ -35,8 +34,8 @@ export default function ProtectedRoute() {
       {session?.user && (
         <>
           {/* Top Tracks Section */}
+          <TopArtistsPlaylistCreator session={session} />
           <TopTracks session={session} />
-          {/* <RecommendedSongs session={session} /> */}
           <button onClick={handleSignOut}>Sign Out</button>
         </>
       )}
