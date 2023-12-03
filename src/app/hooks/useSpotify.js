@@ -260,7 +260,7 @@ export const useSpotify = (session) => {
         );
 
         // Use existing function to create a new playlist and add tracks
-        const playlistName = "My Top Artists' Top Tracks";
+        const playlistName = "My Recommended Artists' Top Tracks";
         const newPlaylist = await createPlaylist(playlistName, trackUris);
 
         console.log("New playlist created:", newPlaylist);
