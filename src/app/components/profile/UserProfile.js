@@ -2,8 +2,6 @@ import React from "react";
 import Image from "next/image";
 
 const UserProfile = ({ user }) => {
-  // Placeholder image URL (use an appropriate one)
-  const placeholderImage = "/path/to/placeholder/image.jpg";
 
   return (
     <div className="container mt-4">
@@ -19,7 +17,7 @@ const UserProfile = ({ user }) => {
             }}
           >
             <Image
-              src={user.image || placeholderImage}
+              src={user.image}
               alt="Profile Picture"
               width={150}
               height={150}

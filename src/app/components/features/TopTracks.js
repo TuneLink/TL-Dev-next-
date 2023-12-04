@@ -45,9 +45,9 @@ const TopTracks = ({ session }) => {
     <div className="card">
       <div className="card-header">
         <h3>Your Recent Top Tracks</h3>
-        <button onClick={handleCreatePlaylist} className="btn btn-primary">
+        {/* <button onClick={handleCreatePlaylist} className="btn btn-primary">
           Create Playlist
-        </button>
+        </button> */}
       </div>
       <ul className="list-group list-group-flush" style={listStyle}>
         {topTracks.map((track, index) => (

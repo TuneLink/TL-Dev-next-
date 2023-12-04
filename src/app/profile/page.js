@@ -38,18 +38,21 @@ export default function ProtectedRoute() {
   if (status === "unauthenticated") {
     return (
       <>
+        <h2>Profile Page</h2>
         <p>You need to be signed in to view this page.</p>
-        <button onClick={() => signIn()}>Sign In</button>
+        <button className="btn btn-primary orange-btn" onClick={() => signIn()}>
+          Sign In
+        </button>
       </>
     );
   }
 
   return (
     <>
+      <h2>Profile Page</h2>
       <UserProfile user={session.user} />
       <UserPlaylists session={session} />
       <LikedSongsList songs={likedSongs} />
-      <button onClick={handleSignOut}>Sign Out</button>
     </>
   );
 }

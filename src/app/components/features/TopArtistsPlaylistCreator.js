@@ -38,12 +38,12 @@ const TopArtistsPlaylistCreator = ({ session }) => {
     <div className="card">
       <div className="card-header">
         <h3>Your Recommended Artists</h3>
-        <button
+        {/* <button
           onClick={() => fetchTopArtistsAndCreatePlaylist()}
           className="btn btn-primary"
         >
           Create Playlist
-        </button>
+        </button> */}
       </div>
       <ul className="list-group list-group-flush" style={listStyle}>
         {topArtists.map((artist, index) => (

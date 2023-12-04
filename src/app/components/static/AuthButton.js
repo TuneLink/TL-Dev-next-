@@ -13,15 +13,20 @@ const AuthButton = () => {
   if (session) {
     return (
       <>
-        {session.user.name} <br />
-        <button onClick={handleSignOut}>Sign Out</button>
+        <br />
+        <span style={{ marginRight: "10px" }}>{session.user.name}</span>
+        <button className="btn btn-secondary" onClick={handleSignOut}>
+          Sign Out
+        </button>
       </>
     );
   }
   return (
     <>
-      Not signed in <br />
-      <button onClick={() => signIn()}>Sign in</button>
+      <br />
+      <button className="btn btn-light" onClick={() => signIn()}>
+        Sign in
+      </button>
     </>
   );
 };

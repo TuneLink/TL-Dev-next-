@@ -23,7 +23,9 @@ export default function ProtectedRoute() {
       <>
         <h2>Features Page</h2>
         <p>You need to be signed in to view this page.</p>
-        <button onClick={() => signIn()}>Sign In</button>
+        <button className="btn btn-primary orange-btn" onClick={() => signIn()}>
+          Sign In
+        </button>{" "}
       </>
     );
   }
@@ -36,7 +38,6 @@ export default function ProtectedRoute() {
           {/* Top Tracks Section */}
           <TopArtistsPlaylistCreator session={session} />
           <TopTracks session={session} />
-          <button onClick={handleSignOut}>Sign Out</button>
         </>
       )}
     </>

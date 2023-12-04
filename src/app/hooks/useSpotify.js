@@ -217,58 +217,58 @@ export const useSpotify = (session) => {
     return false; // No session, can't update
   };
 
-  const fetchTopArtistsAndCreatePlaylist = async () => {
-    if (session) {
-      try {
-        // Fetch top artists
-        const artistResponse = await fetch(
-          "https://api.spotify.com/v1/me/top/artists?time_range=medium_term&limit=10",
-          {
-            headers: {
-              Authorization: `Bearer ${session.accessToken}`,
-            },
-          }
-        );
+  // const fetchTopArtistsAndCreatePlaylist = async () => {
+  //   if (session) {
+  //     try {
+  //       // Fetch top artists
+  //       const artistResponse = await fetch(
+  //         "https://api.spotify.com/v1/me/top/artists?time_range=medium_term&limit=10",
+  //         {
+  //           headers: {
+  //             Authorization: `Bearer ${session.accessToken}`,
+  //           },
+  //         }
+  //       );
 
-        if (!artistResponse.ok) {
-          throw new Error("Failed to fetch top artists");
-        }
+  //       if (!artistResponse.ok) {
+  //         throw new Error("Failed to fetch top artists");
+  //       }
 
-        const artistData = await artistResponse.json();
+  //       const artistData = await artistResponse.json();
 
-        // Fetch top track for each artist
-        const trackUris = await Promise.all(
-          artistData.items.map(async (artist) => {
-            const trackResponse = await fetch(
-              `https://api.spotify.com/v1/artists/${artist.id}/top-tracks?country=US`, // Replace 'US' with the relevant country code
-              {
-                headers: {
-                  Authorization: `Bearer ${session.accessToken}`,
-                },
-              }
-            );
+  //       // Fetch top track for each artist
+  //       const trackUris = await Promise.all(
+  //         artistData.items.map(async (artist) => {
+  //           const trackResponse = await fetch(
+  //             `https://api.spotify.com/v1/artists/${artist.id}/top-tracks?country=US`, // Replace 'US' with the relevant country code
+  //             {
+  //               headers: {
+  //                 Authorization: `Bearer ${session.accessToken}`,
+  //               },
+  //             }
+  //           );
 
-            if (!trackResponse.ok) {
-              throw new Error(
-                `Failed to fetch top track for artist ${artist.name}`
-              );
-            }
+  //           if (!trackResponse.ok) {
+  //             throw new Error(
+  //               `Failed to fetch top track for artist ${artist.name}`
+  //             );
+  //           }
 
-            const trackData = await trackResponse.json();
-            return trackData.tracks[0].uri; // Get the URI of the top track
-          })
-        );
+  //           const trackData = await trackResponse.json();
+  //           return trackData.tracks[0].uri; // Get the URI of the top track
+  //         })
+  //       );
 
-        // Use existing function to create a new playlist and add tracks
-        const playlistName = "My Recommended Artists' Top Tracks";
-        const newPlaylist = await createPlaylist(playlistName, trackUris);
+  //       // Use existing function to create a new playlist and add tracks
+  //       const playlistName = "My Recommended Artists' Top Tracks";
+  //       const newPlaylist = await createPlaylist(playlistName, trackUris);
 
-        console.log("New playlist created:", newPlaylist);
-      } catch (error) {
-        console.error("Error in playlist creation", error);
-      }
-    }
-  };
+  //       console.log("New playlist created:", newPlaylist);
+  //     } catch (error) {
+  //       console.error("Error in playlist creation", error);
+  //     }
+  //   }
+  // };
 
   return {
     likedSongs,
@@ -281,6 +281,6 @@ export const useSpotify = (session) => {
     fetchUserPlaylists,
     deletePlaylist,
     updatePlaylistName,
-    fetchTopArtistsAndCreatePlaylist
+    // fetchTopArtistsAndCreatePlaylist
   };
 };
