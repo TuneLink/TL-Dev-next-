@@ -99,7 +99,7 @@ const UserPlaylists = ({ session }) => {
                 {playlist.name}
               </a>
               <p className="mb-1">Tracks: {playlist.tracks.total}</p>
-              {/* <button
+              <button
                 onClick={() => handleUpdatePlaylistName(playlist.id)}
                 className="btn btn-primary"
               >
@@ -110,7 +110,7 @@ const UserPlaylists = ({ session }) => {
                 className="btn btn-danger"
               >
                 Delete
-              </button> */}
+              </button>
             </div>
           </li>
         ))}
